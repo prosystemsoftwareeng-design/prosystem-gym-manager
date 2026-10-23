@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <!-- Contact Us Dropdown Menu (Top Left) -->
+            <!-- Contact Us Dropdown Menu -->
             <div class="relative">
                 <button id="contactMenuBtn" onclick="toggleContactMenu()" class="flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-brand-500/20">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,17 +97,14 @@
 
                 <!-- Dropdown List -->
                 <div id="contactDropdown" class="absolute left-0 mt-2 w-48 bg-darkcard border border-darkborder rounded-xl shadow-2xl hidden z-50 overflow-hidden py-1">
-                    <!-- WhatsApp -->
                     <a href="https://wa.me/2012071311400" target="_blank" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:bg-green-600/20 hover:text-green-400 transition-colors">
                         <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-2.978-1.49-4.93-2.658-6.892-6.043-.151-.259-.016-.4.126-.532.129-.129.297-.347.445-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                         <span>واتساب</span>
                     </a>
-                    <!-- Facebook -->
                     <a href="https://www.facebook.com/GymManagerSystem" target="_blank" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:bg-blue-600/20 hover:text-blue-400 transition-colors">
                         <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.588 9 4.711V8z"/></svg>
                         <span>فيسبوك</span>
                     </a>
-                    <!-- YouTube -->
                     <a href="https://youtube.com/@-prosystem?si=e_MNiiAVdedw8ucl" target="_blank" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:bg-red-600/20 hover:text-red-400 transition-colors">
                         <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         <span>يوتيوب</span>
@@ -123,7 +120,7 @@
         <!-- Upload Section -->
         <section class="glass-panel rounded-2xl p-6 lg:p-8 shadow-2xl relative overflow-hidden">
             <div class="max-w-2xl mx-auto text-center space-y-4">
-                <h2 class="text-2xl font-bold text-white">رفع ومشاركة الملفات بروابط مباشرة</h2>
+                <h2 class="text-2xl font-bold text-white">رفع ومشاركة الملفات بروابط مباشرة ومختصرة</h2>
                 <p class="text-gray-400 text-sm">اسحب الملفات وإفلتها هنا، أو اضغط للاختيار من جهازك.</p>
                 
                 <!-- Drop Zone -->
@@ -146,15 +143,11 @@
                 <div id="uploadProgressContainer" class="hidden space-y-3 bg-darkcard border border-darkborder p-4 rounded-xl text-right">
                     <div class="flex justify-between items-center text-xs">
                         <span id="uploadFileName" class="font-medium text-gray-300 truncate max-w-[200px]">filename.zip</span>
-                        <span id="uploadSpeed" class="text-gray-400">جاري الرفع...</span>
+                        <span id="uploadSpeed" class="text-gray-400">جاري معالجة الرابط المختصر...</span>
                         <span id="uploadPercent" class="font-bold text-brand-500">100%</span>
                     </div>
                     <div class="w-full bg-gray-800 h-2.5 rounded-full overflow-hidden">
                         <div id="uploadProgressBar" class="bg-brand-500 h-full w-full transition-all duration-150"></div>
-                    </div>
-                    <div class="flex justify-between text-xs text-gray-500">
-                        <span id="uploadSize">ProSystem Cloud</span>
-                        <span id="uploadStatus">جاري الإرسال إلى السيرفر...</span>
                     </div>
                 </div>
             </div>
@@ -162,10 +155,7 @@
 
         <!-- Dashboard Section -->
         <section class="space-y-6">
-            <!-- Controls Bar -->
             <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-darkcard/50 p-4 rounded-xl border border-darkborder">
-                
-                <!-- Search Box -->
                 <div class="relative w-full sm:w-72">
                     <input type="text" id="searchInput" placeholder="بحث عن ملف..." class="w-full bg-darkcard border border-darkborder rounded-lg pr-10 pl-4 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-500 transition-colors">
                     <svg class="w-4 h-4 text-gray-400 absolute right-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -173,9 +163,7 @@
                     </svg>
                 </div>
 
-                <!-- Filters & View Mode -->
                 <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
-                    <!-- Category Select -->
                     <select id="categoryFilter" class="bg-darkcard border border-darkborder text-gray-300 text-sm rounded-lg px-3 py-2 focus:outline-none focus:border-brand-500">
                         <option value="all">كل الملفات</option>
                         <option value="images">صور</option>
@@ -185,7 +173,6 @@
                         <option value="archives">أرشيف ومضغوط</option>
                     </select>
 
-                    <!-- Toggle Grid/List -->
                     <div class="flex bg-darkcard border border-darkborder rounded-lg p-1">
                         <button id="viewGridBtn" class="p-1.5 rounded bg-gray-800 text-brand-500" title="عرض الشبكة">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
@@ -197,12 +184,8 @@
                 </div>
             </div>
 
-            <!-- File Container Grid Mode -->
-            <div id="fileContainerGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Dynamic Items Inserted via JS -->
-            </div>
+            <div id="fileContainerGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
 
-            <!-- File Container List Mode -->
             <div id="fileContainerList" class="hidden bg-darkcard border border-darkborder rounded-xl overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="w-full text-right text-sm text-gray-300">
@@ -214,14 +197,11 @@
                                 <th class="p-4 text-center">الإجراءات</th>
                             </tr>
                         </thead>
-                        <tbody id="fileListTbody" class="divide-y divide-darkborder">
-                            <!-- Dynamic Table Rows Inserted via JS -->
-                        </tbody>
+                        <tbody id="fileListTbody" class="divide-y divide-darkborder"></tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Empty State -->
             <div id="emptyState" class="hidden text-center py-16 bg-darkcard/20 rounded-2xl border border-dashed border-gray-800">
                 <div class="w-16 h-16 mx-auto mb-4 text-gray-600 flex items-center justify-center rounded-full bg-darkcard">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"/></svg>
@@ -241,16 +221,14 @@
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
-            <div id="modalBody" class="p-6 flex-1 overflow-auto flex items-center justify-center bg-darkbg/50 min-h-[250px]">
-                <!-- Preview Content Loaded Here -->
-            </div>
+            <div id="modalBody" class="p-6 flex-1 overflow-auto flex items-center justify-center bg-darkbg/50 min-h-[250px]"></div>
         </div>
     </div>
 
     <!-- QR Code Modal -->
     <div id="qrModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
         <div class="bg-darkcard border border-darkborder rounded-2xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl">
-            <h3 class="font-bold text-lg text-gray-200">مسح رمز QR للتنزيل</h3>
+            <h3 class="font-bold text-lg text-gray-200">مسح رمز QR للتنزيل المباشر</h3>
             <p class="text-xs text-gray-400">امسح الكود باستخدام كاميرا هاتفك لتنزيل الملف مباشرةً.</p>
             <div id="qrcode" class="p-4 bg-white rounded-xl inline-block"></div>
             <div class="pt-2">
@@ -267,12 +245,10 @@
         <p>جميع الحقوق محفوظة ProSystem Gym Manager © 2026</p>
     </footer>
 
-    <!-- App Logic Connected to Vercel Server -->
+    <!-- App Logic -->
     <script>
-        // Server API URL
-        const API_URL = "https://file-upload-server-eight.vercel.app/";
+        const API_URL = "https://file-upload-server-eight.vercel.app";
 
-        // Toggle Contact Menu Dropdown
         function toggleContactMenu() {
             const dropdown = document.getElementById('contactDropdown');
             const arrow = document.getElementById('contactArrow');
@@ -280,33 +256,29 @@
             arrow.classList.toggle('rotate-180');
         }
 
-        // Close dropdown when clicking outside
         window.addEventListener('click', (e) => {
             const btn = document.getElementById('contactMenuBtn');
             const dropdown = document.getElementById('contactDropdown');
             const arrow = document.getElementById('contactArrow');
-            if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
+            if (btn && dropdown && !btn.contains(e.target) && !dropdown.contains(e.target)) {
                 dropdown.classList.add('hidden');
                 arrow.classList.remove('rotate-180');
             }
         });
 
-        // DB Setup
         const DB_NAME = 'FileDropDB';
         const DB_VERSION = 1;
         const STORE_NAME = 'files';
         let db = null;
         let filesData = [];
-        let viewMode = 'grid'; // 'grid' | 'list'
+        let viewMode = 'grid';
 
-        // Init App on Load
         window.onload = async () => {
             await initDB();
             loadFiles();
             setupEventListeners();
         };
 
-        // IndexedDB Initialization
         function initDB() {
             return new Promise((resolve, reject) => {
                 const request = indexedDB.open(DB_NAME, DB_VERSION);
@@ -321,24 +293,21 @@
                     resolve();
                 };
                 request.onerror = (e) => {
-                    showToast('خطأ في الاتصال بقاعدة البيانات المحلية', 'error');
+                    showToast('خطأ في قاعدة البيانات المحلية', 'error');
                     reject(e);
                 };
             });
         }
 
-        // Setup Event Listeners
         function setupEventListeners() {
             const dropZone = document.getElementById('dropZone');
             const fileInput = document.getElementById('fileInput');
 
             dropZone.addEventListener('click', () => fileInput.click());
             
-            // Drag and Drop Effects
             ['dragenter', 'dragover'].forEach(eventName => {
                 dropZone.addEventListener(eventName, (e) => {
                     e.preventDefault();
-                    e.stopPropagation();
                     dropZone.classList.add('drop-zone-active');
                 }, false);
             });
@@ -346,30 +315,25 @@
             ['dragleave', 'drop'].forEach(eventName => {
                 dropZone.addEventListener(eventName, (e) => {
                     e.preventDefault();
-                    e.stopPropagation();
                     dropZone.classList.remove('drop-zone-active');
                 }, false);
             });
 
             dropZone.addEventListener('drop', (e) => {
-                const droppedFiles = e.dataTransfer.files;
-                if (droppedFiles.length) handleFilesUpload(droppedFiles);
+                if (e.dataTransfer.files.length) handleFilesUpload(e.dataTransfer.files);
             });
 
             fileInput.addEventListener('change', (e) => {
                 if (e.target.files.length) handleFilesUpload(e.target.files);
             });
 
-            // Filters
             document.getElementById('searchInput').addEventListener('input', renderFiles);
             document.getElementById('categoryFilter').addEventListener('change', renderFiles);
 
-            // View Toggle
             document.getElementById('viewGridBtn').addEventListener('click', () => setViewMode('grid'));
             document.getElementById('viewListBtn').addEventListener('click', () => setViewMode('list'));
         }
 
-        // View Mode Toggle
         function setViewMode(mode) {
             viewMode = mode;
             const gridContainer = document.getElementById('fileContainerGrid');
@@ -390,68 +354,66 @@
             }
         }
 
-        // Handle File Processing & Upload to Vercel Server
         async function handleFilesUpload(fileList) {
             for (let file of fileList) {
                 await uploadSingleFileToServer(file);
             }
         }
 
-        // Upload File via Fetch to Vercel API Server
-      async function uploadSingleFileToServer(file) {
-    const progressContainer = document.getElementById('uploadProgressContainer');
-    const progressFileName = document.getElementById('uploadFileName');
-    progressContainer.classList.remove('hidden');
-    progressFileName.textContent = file.name;
+        async function uploadSingleFileToServer(file) {
+            const progressContainer = document.getElementById('uploadProgressContainer');
+            const progressFileName = document.getElementById('uploadFileName');
+            progressContainer.classList.remove('hidden');
+            progressFileName.textContent = file.name;
 
-    const reader = new FileReader();
-    reader.onload = async function (e) {
-        const base64Data = e.target.result;
+            const reader = new FileReader();
+            reader.onload = async function (e) {
+                const base64Data = e.target.result;
 
-        try {
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    filename: file.name,
-                    file: base64Data
-                })
-            });
+                try {
+                    const response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            filename: file.name,
+                            file: base64Data
+                        })
+                    });
 
-            const result = await response.json();
+                    const result = await response.json();
 
-            if (result.success) {
-                const fileRecord = {
-                    id: 'f_' + Math.random().toString(36).substring(2, 9),
-                    name: file.name,
-                    size: file.size,
-                    type: file.type || 'application/octet-stream',
-                    category: getFileCategory(file.type, file.name),
-                    date: new Date().toISOString(),
-                    data: file,
-                    download_url: result.download_url
-                };
+                    if (result.success) {
+                        const fileRecord = {
+                            id: result.file_id || ('f_' + Math.random().toString(36).substring(2, 9)),
+                            name: file.name,
+                            size: file.size,
+                            type: file.type || 'application/octet-stream',
+                            category: getFileCategory(file.type, file.name),
+                            date: new Date().toISOString(),
+                            data: file,
+                            download_url: result.download_url // رابط مختصر مباشر للملف
+                        };
 
-                await saveFileToDB(fileRecord);
-                showToast(`تم رفع ${file.name} بنجاح!`, 'success');
-                loadFiles();
-            } else {
-                showToast(`فشل الرفع: ${result.message || 'خطأ'}`, 'error');
-            }
-        } catch (error) {
-            console.error(error);
-            showToast('حدث خطأ أثناء الاتصال بالسيرفر السحابي', 'error');
-        } finally {
-            setTimeout(() => {
-                progressContainer.classList.add('hidden');
-            }, 1000);
+                        await saveFileToDB(fileRecord);
+                        showToast(`تم رفع ${file.name} بنجاح!`, 'success');
+                        loadFiles();
+                    } else {
+                        showToast(`فشل الرفع: ${result.message || 'خطأ'}`, 'error');
+                    }
+                } catch (error) {
+                    console.error(error);
+                    showToast('حدث خطأ أثناء الاتصال بالسيرفر السحابي', 'error');
+                } finally {
+                    setTimeout(() => {
+                        progressContainer.classList.add('hidden');
+                    }, 1000);
+                }
+            };
+            reader.readAsDataURL(file);
         }
-    };
-    reader.readAsDataURL(file);
-}
-        // Save to IndexedDB
+
         function saveFileToDB(record) {
             return new Promise((resolve, reject) => {
                 const tx = db.transaction(STORE_NAME, 'readwrite');
@@ -462,7 +424,6 @@
             });
         }
 
-        // Load Files From IndexedDB
         function loadFiles() {
             if (!db) return;
             const tx = db.transaction(STORE_NAME, 'readonly');
@@ -475,7 +436,6 @@
             };
         }
 
-        // Filter and Render
         function renderFiles() {
             const searchQuery = document.getElementById('searchInput').value.toLowerCase();
             const category = document.getElementById('categoryFilter').value;
@@ -503,7 +463,6 @@
             filtered.forEach(file => {
                 const shareLink = file.download_url || '#';
 
-                // --- Grid Item ---
                 const gridCard = document.createElement('div');
                 gridCard.className = 'glass-panel rounded-xl p-4 flex flex-col justify-between hover:border-brand-500/50 transition-all duration-300 group';
                 gridCard.innerHTML = `
@@ -537,7 +496,6 @@
                 `;
                 gridContainer.appendChild(gridCard);
 
-                // --- List Item ---
                 const tr = document.createElement('tr');
                 tr.className = "hover:bg-gray-800/30 transition-colors";
                 tr.innerHTML = `
@@ -552,7 +510,7 @@
                     <td class="p-4">
                         <div class="flex items-center justify-center gap-2">
                             <button onclick="downloadFile('${file.id}')" class="p-1.5 text-brand-500 hover:bg-brand-500/10 rounded-lg" title="تنزيل"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg></button>
-                            <button onclick="copyDirectLink('${shareLink}')" class="p-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg" title="نسخ الرابط"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></button>
+                            <button onclick="copyDirectLink('${shareLink}')" class="p-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg" title="نسخ الرابط المباشر"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg></button>
                             <button onclick="openPreviewModal('${file.id}')" class="p-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg" title="معاينة"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></button>
                             <button onclick="showQRCode('${shareLink}')" class="p-1.5 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg" title="QR"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg></button>
                             <button onclick="deleteFile('${file.id}')" class="p-1.5 text-red-400 hover:bg-red-500/10 rounded-lg" title="حذف"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg></button>
@@ -563,7 +521,6 @@
             });
         }
 
-        // Helper: File Card Preview HTML (Updated for Clean Image Preview & Fallback Icons)
         function getFilePreviewHTML(file) {
             if (file.category === 'images' && file.data) {
                 const url = (file.data instanceof Blob) ? URL.createObjectURL(file.data) : file.download_url;
@@ -572,7 +529,6 @@
             return `<div class="text-brand-500">${getFileIconSVG(file.category, 'w-12 h-12')}</div>`;
         }
 
-        // File Download Trigger
         function downloadFile(fileId) {
             const file = filesData.find(f => f.id === fileId);
             if (!file) {
@@ -580,26 +536,10 @@
                 return;
             }
 
-            let url = file.download_url;
-            if (file.data instanceof Blob) {
-                url = URL.createObjectURL(file.data);
-            }
-
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = file.name;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-
-            if (file.data instanceof Blob) {
-                setTimeout(() => URL.revokeObjectURL(url), 1000);
-            }
-
-            showToast(`بدأ تنزيل ${file.name}`, 'success');
+            window.open(file.download_url, '_blank');
+            showToast(`جاري تنزيل ${file.name}`, 'success');
         }
 
-        // Delete File
         function deleteFile(fileId) {
             if (!db) return;
             const tx = db.transaction(STORE_NAME, 'readwrite');
@@ -612,7 +552,6 @@
             };
         }
 
-        // Copy Direct Link to Clipboard
         function copyDirectLink(link) {
             const tempInput = document.createElement('input');
             tempInput.value = link;
@@ -621,10 +560,9 @@
             document.execCommand('copy');
             document.body.removeChild(tempInput);
 
-            showToast('تم نسخ رابط التنزيل المباشر بالحافظة!', 'success');
+            showToast('تم نسخ رابط التنزيل المباشر المختصر!', 'success');
         }
 
-        // Modal Preview Handler
         function openPreviewModal(fileId) {
             const file = filesData.find(f => f.id === fileId);
             if (!file) return;
@@ -658,22 +596,11 @@
                 audio.controls = true;
                 audio.className = 'w-full px-4';
                 modalBody.appendChild(audio);
-            } else if (file.type.startsWith('text/') || file.name.endsWith('.json') || file.name.endsWith('.js') || file.name.endsWith('.css') || file.name.endsWith('.html')) {
-                if (file.data instanceof Blob) {
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        const pre = document.createElement('pre');
-                        pre.className = 'text-xs font-mono text-gray-300 bg-darkcard p-4 rounded-lg w-full max-h-[60vh] overflow-auto whitespace-pre-wrap ltr text-left';
-                        pre.textContent = e.target.result;
-                        modalBody.appendChild(pre);
-                    };
-                    reader.readAsText(file.data);
-                }
             } else {
                 modalBody.innerHTML = `
                     <div class="text-center py-8 space-y-3">
                         <div class="text-gray-500">${getFileIconSVG(file.category, 'w-16 h-16')}</div>
-                        <p class="text-sm text-gray-400">المعاينة المباشرة غير مدعومة لهذا النوع من الملفات.</p>
+                        <p class="text-sm text-gray-400">يمكنك تحميل الملف مباشرة عبر الرابط.</p>
                         <button onclick="downloadFile('${file.id}')" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white rounded-lg text-sm font-semibold transition-colors">تنزيل الملف مباشرة</button>
                     </div>
                 `;
@@ -686,7 +613,6 @@
             document.getElementById('previewModal').classList.add('hidden');
         }
 
-        // Show QR Code
         function showQRCode(link) {
             const modal = document.getElementById('qrModal');
             const qrContainer = document.getElementById('qrcode');
@@ -708,7 +634,6 @@
             document.getElementById('qrModal').classList.add('hidden');
         }
 
-        // Helper: File Type Categories
         function getFileCategory(mime, filename) {
             const ext = filename.split('.').pop().toLowerCase();
             if (mime.startsWith('image/') || ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(ext)) return 'images';
@@ -719,7 +644,6 @@
             return 'documents';
         }
 
-        // Helper: SVG Icons
         function getFileIconSVG(category, sizeClass = 'w-5 h-5') {
             switch (category) {
                 case 'images':
@@ -735,7 +659,6 @@
             }
         }
 
-        // Helper: Format Bytes Size
         function formatBytes(bytes, decimals = 2) {
             if (bytes === 0) return '0 Bytes';
             const k = 1024;
@@ -745,13 +668,11 @@
             return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
         }
 
-        // Helper: Format Date
         function formatDate(isoString) {
             const date = new Date(isoString);
             return date.toLocaleDateString('ar-EG', { month: 'short', day: 'numeric', year: 'numeric' });
         }
 
-        // Toast Notification System
         function showToast(message, type = 'info') {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
