@@ -398,57 +398,59 @@
         }
 
         // Upload File via Fetch to Vercel API Server
-        async function uploadSingleFileToServer(file) {
-            const progressContainer = document.getElementById('uploadProgressContainer');
-            const progressFileName = document.getElementById('uploadFileName');
-            progressContainer.classList.remove('hidden');
-            progressFileName.textContent = file.name;
+      async function uploadSingleFileToServer(file) {
+    const progressContainer = document.getElementById('uploadProgressContainer');
+    const progressFileName = document.getElementById('uploadFileName');
+    progressContainer.classList.remove('hidden');
+    progressFileName.textContent = file.name;
 
-            const formData = new FormData();
-            formData.append('file', file);
+    const reader = new FileReader();
+    reader.onload = async function (e) {
+        const base64Data = e.target.result;
 
-            try {
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: {
-                        'x-file-name': encodeURIComponent(file.name),
-                        'content-type': file.type || 'application/octet-stream'
-                    },
-                    body: formData
-                });
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    filename: file.name,
+                    file: base64Data
+                })
+            });
 
-                const result = await response.json();
+            const result = await response.json();
 
-                if (result.success) {
-                    const category = getFileCategory(file.type, file.name);
+            if (result.success) {
+                const fileRecord = {
+                    id: 'f_' + Math.random().toString(36).substring(2, 9),
+                    name: file.name,
+                    size: file.size,
+                    type: file.type || 'application/octet-stream',
+                    category: getFileCategory(file.type, file.name),
+                    date: new Date().toISOString(),
+                    data: file,
+                    download_url: result.download_url
+                };
 
-                    const fileRecord = {
-                        id: 'f_' + Math.random().toString(36).substring(2, 9),
-                        name: file.name,
-                        size: file.size,
-                        type: file.type || 'application/octet-stream',
-                        category: category,
-                        date: new Date().toISOString(),
-                        data: file, // Save actual file Blob for clean preview
-                        download_url: result.download_url
-                    };
-
-                    await saveFileToDB(fileRecord);
-                    showToast(`تم رفع ${file.name} بنجاح!`, 'success');
-                    loadFiles();
-                } else {
-                    showToast(`فشل الرفع: ${result.message || 'خطأ غير معروف'}`, 'error');
-                }
-            } catch (error) {
-                console.error(error);
-                showToast('حدث خطأ أثناء الاتصال بالسيرفر السحابي', 'error');
-            } finally {
-                setTimeout(() => {
-                    progressContainer.classList.add('hidden');
-                }, 1000);
+                await saveFileToDB(fileRecord);
+                showToast(`تم رفع ${file.name} بنجاح!`, 'success');
+                loadFiles();
+            } else {
+                showToast(`فشل الرفع: ${result.message || 'خطأ'}`, 'error');
             }
+        } catch (error) {
+            console.error(error);
+            showToast('حدث خطأ أثناء الاتصال بالسيرفر السحابي', 'error');
+        } finally {
+            setTimeout(() => {
+                progressContainer.classList.add('hidden');
+            }, 1000);
         }
-
+    };
+    reader.readAsDataURL(file);
+}
         // Save to IndexedDB
         function saveFileToDB(record) {
             return new Promise((resolve, reject) => {
