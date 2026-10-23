@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProSystem</title>
+    <title> ProSystem Gym Manger</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -28,7 +28,7 @@
             }
         }
     </script>
-    <!-- Google Fonts (Cairo for Arabic) -->
+    <!-- Google Fonts (Inter + Cairo for Arabic) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -71,47 +71,29 @@
     <!-- Header Navigation -->
     <header class="glass-panel sticky top-0 z-30 border-b border-darkborder px-4 lg:px-8 py-3">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <!-- Logo & Title -->
             <div class="flex items-center gap-3">
-                <div class="p-2 bg-brand-600 rounded-xl shadow-lg shadow-brand-500/30 text-white flex items-center justify-center font-bold text-lg">
-                    PS
+                <div class="p-2 bg-brand-600 rounded-xl shadow-lg shadow-brand-500/30 text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
                 </div>
                 <div>
                     <h1 class="text-xl font-bold tracking-wide text-white flex items-center gap-2">
-                        ProSystem <span class="text-xs font-normal px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-500 border border-brand-500/30">Gym Manager</span>
+                        FileDrop <span class="text-xs font-normal px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-500 border border-brand-500/30">مجاني ومباشر</span>
                     </h1>
                 </div>
             </div>
 
-            <!-- Contact Us Dropdown Menu (Top Left) -->
-            <div class="relative">
-                <button id="contactMenuBtn" onclick="toggleContactMenu()" class="flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-brand-500/20">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                    </svg>
-                    <span>تواصل معنا</span>
-                    <svg class="w-3.5 h-3.5 transition-transform duration-200" id="contactArrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
-
-                <!-- Dropdown List -->
-                <div id="contactDropdown" class="absolute left-0 mt-2 w-48 bg-darkcard border border-darkborder rounded-xl shadow-2xl hidden z-50 overflow-hidden py-1">
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/2012071311400" target="_blank" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:bg-green-600/20 hover:text-green-400 transition-colors">
-                        <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-2.978-1.49-4.93-2.658-6.892-6.043-.151-.259-.016-.4.126-.532.129-.129.297-.347.445-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                        <span>واتساب</span>
-                    </a>
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/GymManagerSystem" target="_blank" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:bg-blue-600/20 hover:text-blue-400 transition-colors">
-                        <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.37 14.5 5 15.5 5H18V0h-3.808C10.59 0 9 1.588 9 4.711V8z"/></svg>
-                        <span>فيسبوك</span>
-                    </a>
-                    <!-- YouTube -->
-                    <a href="https://youtube.com/@-prosystem?si=e_MNiiAVdedw8ucl" target="_blank" class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:bg-red-600/20 hover:text-red-400 transition-colors">
-                        <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        <span>يوتيوب</span>
-                    </a>
+            <!-- Storage Indicator Header -->
+            <div class="hidden sm:flex items-center gap-4 bg-darkcard/80 border border-darkborder px-4 py-2 rounded-xl">
+                <div class="text-xs">
+                    <div class="flex justify-between text-gray-400 mb-1 gap-3">
+                        
+                        <span id="storageText" class="font-semibold text-gray-200">0 MB / 500 MB</span>
+                    </div>
+                    <div class="w-36 bg-gray-800 h-2 rounded-full overflow-hidden">
+                        <div id="storageBar" class="bg-brand-500 h-full w-0 transition-all duration-300"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -124,7 +106,7 @@
         <section class="glass-panel rounded-2xl p-6 lg:p-8 shadow-2xl relative overflow-hidden">
             <div class="max-w-2xl mx-auto text-center space-y-4">
                 <h2 class="text-2xl font-bold text-white">رفع ومشاركة الملفات بروابط مباشرة</h2>
-                <p class="text-gray-400 text-sm">اسحب الملفات وإفلتها هنا، أو اضغط للاختيار من جهازك.</p>
+                <p class="text-gray-400 text-sm">اسحب الملفات وإفلتها هنا، أو اضغط للاختيار من جهازك. الحجم الأقصى للملف الواحد: 200 ميجابايت.</p>
                 
                 <!-- Drop Zone -->
                 <div id="dropZone" class="border-2 border-dashed border-gray-700 hover:border-brand-500 rounded-xl p-8 transition-all duration-300 bg-darkcard/40 cursor-pointer flex flex-col items-center justify-center gap-4 group">
@@ -153,8 +135,8 @@
                         <div id="uploadProgressBar" class="bg-brand-500 h-full w-full transition-all duration-150"></div>
                     </div>
                     <div class="flex justify-between text-xs text-gray-500">
-                        <span id="uploadSize">ProSystem Cloud</span>
-                        <span id="uploadStatus">جاري الإرسال إلى السيرفر...</span>
+                        <span id="uploadSize">سيرفر سحابي</span>
+                        <span id="uploadStatus">جاري الإرسال إلى Vercel...</span>
                     </div>
                 </div>
             </div>
@@ -264,37 +246,19 @@
 
     <!-- Footer -->
     <footer class="border-t border-darkborder py-6 text-center text-xs text-gray-500 bg-darkcard/30">
-        <p>جميع الحقوق محفوظة ProSystem Gym Manager © 2026</p>
+        <p>نظام مشاركة الملفات المباشر © 2026 - مجاني بالكامل وبدون قيود سيرفرات خارجية</p>
     </footer>
 
-    <!-- App Logic Connected to Vercel Server -->
+    <!-- App Logic & IndexedDB Engine Connected to Vercel Server -->
     <script>
         // Server API URL
-        const API_URL = "https://file-upload-server-eight.vercel.app";
-
-        // Toggle Contact Menu Dropdown
-        function toggleContactMenu() {
-            const dropdown = document.getElementById('contactDropdown');
-            const arrow = document.getElementById('contactArrow');
-            dropdown.classList.toggle('hidden');
-            arrow.classList.toggle('rotate-180');
-        }
-
-        // Close dropdown when clicking outside
-        window.addEventListener('click', (e) => {
-            const btn = document.getElementById('contactMenuBtn');
-            const dropdown = document.getElementById('contactDropdown');
-            const arrow = document.getElementById('contactArrow');
-            if (!btn.contains(e.target) && !dropdown.contains(e.target)) {
-                dropdown.classList.add('hidden');
-                arrow.classList.remove('rotate-180');
-            }
-        });
+        const API_URL = "https://file-upload-server-eight.vercel.app/";
 
         // DB Setup
         const DB_NAME = 'FileDropDB';
         const DB_VERSION = 1;
         const STORE_NAME = 'files';
+        const MAX_STORAGE_MB = 500;
         let db = null;
         let filesData = [];
         let viewMode = 'grid'; // 'grid' | 'list'
@@ -393,6 +357,10 @@
         // Handle File Processing & Upload to Vercel Server
         async function handleFilesUpload(fileList) {
             for (let file of fileList) {
+                if (file.size > 200 * 1024 * 1024) {
+                    showToast(`الملف ${file.name} يتجاوز الحد الأقصى 200 ميجابايت`, 'error');
+                    continue;
+                }
                 await uploadSingleFileToServer(file);
             }
         }
@@ -410,31 +378,29 @@
             try {
                 const response = await fetch(API_URL, {
                     method: 'POST',
-                    headers: {
-                        'x-file-name': encodeURIComponent(file.name),
-                        'content-type': file.type || 'application/octet-stream'
-                    },
                     body: formData
                 });
 
                 const result = await response.json();
 
                 if (result.success) {
-                    const category = getFileCategory(file.type, file.name);
+                    // Convert Data URL to Blob for local preview and keeping consistency
+                    const responseBlob = await fetch(result.download_url);
+                    const fileBlob = await responseBlob.blob();
 
                     const fileRecord = {
                         id: 'f_' + Math.random().toString(36).substring(2, 9),
-                        name: file.name,
+                        name: result.filename,
                         size: file.size,
                         type: file.type || 'application/octet-stream',
-                        category: category,
+                        category: getFileCategory(file.type, file.name),
                         date: new Date().toISOString(),
-                        data: file, // Save actual file Blob for clean preview
-                        download_url: result.download_url
+                        data: fileBlob,
+                        download_url: result.download_url // Server Base64 Link
                     };
 
                     await saveFileToDB(fileRecord);
-                    showToast(`تم رفع ${file.name} بنجاح!`, 'success');
+                    showToast(`تم رفع ${file.name} بنجاح للسيرفر!`, 'success');
                     loadFiles();
                 } else {
                     showToast(`فشل الرفع: ${result.message || 'خطأ غير معروف'}`, 'error');
@@ -469,6 +435,7 @@
 
             request.onsuccess = () => {
                 filesData = request.result || [];
+                updateStorageMetrics();
                 renderFiles();
             };
         }
@@ -561,15 +528,6 @@
             });
         }
 
-        // Helper: File Card Preview HTML (Updated for Clean Image Preview & Fallback Icons)
-        function getFilePreviewHTML(file) {
-            if (file.category === 'images' && file.data) {
-                const url = (file.data instanceof Blob) ? URL.createObjectURL(file.data) : file.download_url;
-                return `<img src="${url}" class="w-full h-full object-cover rounded-lg" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'text-brand-500\\'>${getFileIconSVG('images', 'w-12 h-12')}</div>';" />`;
-            }
-            return `<div class="text-brand-500">${getFileIconSVG(file.category, 'w-12 h-12')}</div>`;
-        }
-
         // File Download Trigger
         function downloadFile(fileId) {
             const file = filesData.find(f => f.id === fileId);
@@ -578,21 +536,14 @@
                 return;
             }
 
-            let url = file.download_url;
-            if (file.data instanceof Blob) {
-                url = URL.createObjectURL(file.data);
-            }
-
+            const url = URL.createObjectURL(file.data);
             const a = document.createElement('a');
             a.href = url;
             a.download = file.name;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-
-            if (file.data instanceof Blob) {
-                setTimeout(() => URL.revokeObjectURL(url), 1000);
-            }
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
 
             showToast(`بدأ تنزيل ${file.name}`, 'success');
         }
@@ -634,10 +585,7 @@
             modalTitle.textContent = file.name;
             modalBody.innerHTML = '';
 
-            let objectUrl = file.download_url;
-            if (file.data instanceof Blob) {
-                objectUrl = URL.createObjectURL(file.data);
-            }
+            const objectUrl = URL.createObjectURL(file.data);
 
             if (file.category === 'images') {
                 const img = document.createElement('img');
@@ -657,16 +605,14 @@
                 audio.className = 'w-full px-4';
                 modalBody.appendChild(audio);
             } else if (file.type.startsWith('text/') || file.name.endsWith('.json') || file.name.endsWith('.js') || file.name.endsWith('.css') || file.name.endsWith('.html')) {
-                if (file.data instanceof Blob) {
-                    const reader = new FileReader();
-                    reader.onload = (e) => {
-                        const pre = document.createElement('pre');
-                        pre.className = 'text-xs font-mono text-gray-300 bg-darkcard p-4 rounded-lg w-full max-h-[60vh] overflow-auto whitespace-pre-wrap ltr text-left';
-                        pre.textContent = e.target.result;
-                        modalBody.appendChild(pre);
-                    };
-                    reader.readAsText(file.data);
-                }
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const pre = document.createElement('pre');
+                    pre.className = 'text-xs font-mono text-gray-300 bg-darkcard p-4 rounded-lg w-full max-h-[60vh] overflow-auto whitespace-pre-wrap ltr text-left';
+                    pre.textContent = e.target.result;
+                    modalBody.appendChild(pre);
+                };
+                reader.readAsText(file.data);
             } else {
                 modalBody.innerHTML = `
                     <div class="text-center py-8 space-y-3">
@@ -717,6 +663,15 @@
             return 'documents';
         }
 
+        // Helper: File Card Preview HTML
+        function getFilePreviewHTML(file) {
+            if (file.category === 'images') {
+                const url = URL.createObjectURL(file.data);
+                return `<img src="${url}" class="w-full h-full object-cover rounded-lg" onload="URL.revokeObjectURL(this.src)" />`;
+            }
+            return `<div class="text-brand-500">${getFileIconSVG(file.category, 'w-12 h-12')}</div>`;
+        }
+
         // Helper: SVG Icons
         function getFileIconSVG(category, sizeClass = 'w-5 h-5') {
             switch (category) {
@@ -747,6 +702,16 @@
         function formatDate(isoString) {
             const date = new Date(isoString);
             return date.toLocaleDateString('ar-EG', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        // Helper: Storage Metrics Update
+        function updateStorageMetrics() {
+            const totalBytes = filesData.reduce((acc, f) => acc + f.size, 0);
+            const totalMB = totalBytes / (1024 * 1024);
+            const percent = Math.min((totalMB / MAX_STORAGE_MB) * 100, 100);
+
+            document.getElementById('storageText').textContent = `${totalMB.toFixed(1)} MB / ${MAX_STORAGE_MB} MB`;
+            document.getElementById('storageBar').style.width = percent + '%';
         }
 
         // Toast Notification System
